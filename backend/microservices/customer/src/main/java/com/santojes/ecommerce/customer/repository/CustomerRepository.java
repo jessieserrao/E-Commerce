@@ -1,4 +1,4 @@
-package com.santojes.ecommerce.customer.persistence;
+package com.santojes.ecommerce.customer.repository;
 
 import com.santojes.ecommerce.customer.model.Customer;
 import org.springframework.data.mongodb.repository.MongoRepository;

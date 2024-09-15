@@ -3,9 +3,10 @@ package com.santojes.ecommerce.customer.mapper;
 import com.santojes.ecommerce.customer.model.Customer;
 import com.santojes.ecommerce.customer.model.CustomerRequest;
 import com.santojes.ecommerce.customer.model.CustomerResponse;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
-
+@Component
 public class CustomerMapper {
 
     public Customer createCustomer(CustomerRequest customerRequest){

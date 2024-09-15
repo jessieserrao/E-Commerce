@@ -4,7 +4,7 @@ import com.santojes.ecommerce.customer.mapper.CustomerMapper;
 import com.santojes.ecommerce.customer.model.Customer;
 import com.santojes.ecommerce.customer.model.CustomerRequest;
 import com.santojes.ecommerce.customer.model.CustomerResponse;
-import com.santojes.ecommerce.customer.persistence.CustomerRepository;
+import com.santojes.ecommerce.customer.repository.CustomerRepository;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
 
@@ -17,6 +17,12 @@ public class CustomerService {
 
     protected CustomerRepository customerRepository;
     protected CustomerMapper customerMapper;
+
+    public CustomerService(CustomerRepository customerRepository, CustomerMapper customerMapper) {
+        this.customerRepository = customerRepository;
+        this.customerMapper = customerMapper;
+    }
+
     public String createCustomer(CustomerRequest request) {
         var customer = customerRepository.save(customerMapper.createCustomer(request));
         return customer.getId();
