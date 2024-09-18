@@ -12,8 +12,8 @@ import org.springframework.validation.annotation.Validated;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Address {
+
     private String streetName;
     private String houseNumber;
     private String zipCode;
-
 }

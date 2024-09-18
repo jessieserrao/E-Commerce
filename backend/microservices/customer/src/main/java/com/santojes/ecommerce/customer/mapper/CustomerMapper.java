@@ -5,12 +5,11 @@ import com.santojes.ecommerce.customer.model.CustomerRequest;
 import com.santojes.ecommerce.customer.model.CustomerResponse;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
 @Component
 public class CustomerMapper {
 
-    public Customer createCustomer(CustomerRequest customerRequest){
-        if(customerRequest == null){
+    public Customer createCustomer(CustomerRequest customerRequest) {
+        if (customerRequest == null) {
             return null;
         }
         return Customer.builder()
@@ -23,7 +22,7 @@ public class CustomerMapper {
     }
 
     public CustomerResponse fromCustomer(Customer customer) {
-        if(customer == null){
+        if (customer == null) {
             return null;
         }
         return new CustomerResponse(
